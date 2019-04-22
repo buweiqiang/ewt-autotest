@@ -1,0 +1,11 @@
+[MediaTest.test_p1_get_video_play_url_with_callback_normally]
+videocode=98d9e22ee4d47c0097b4ba55e9ebe851
+
+[MediaTest.test_p1_get_video_play_url_with_callback_incorrect_videocode]
+videocode=abcd1234
+
+[MediaTest.test_p1_get_video_play_url_by_videocode_normally]
+videocode=2d3b82dfa5d040e82676009f2a0746f6
+
+[MediaTest.test_p2_get_video_play_url_by_videocode_not_exist]
+videocode=abcd1234
