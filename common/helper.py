@@ -364,7 +364,7 @@ def write_json_to_file(file_name, json_string):
 
 # 写文件是建议都用wb的方式,防止windows操作系统做对换行符做转换
 def write_bytes(file_path, content, append=False):
-    write_mode = 'ab+' if append else 'wb'
+    write_mode = 'ab' if append else 'wb'
     with open(file_path, write_mode) as to_file:
         print('write content type:', type(content))
         # 在python3中,str和unicode都统一为str了,wb的话需要将string编码为bytes再写入
@@ -376,8 +376,8 @@ def write_bytes(file_path, content, append=False):
 
 # 注意中文版windows的默认写入的编码格式是gbk
 def write_file(file_path, str_content, append=False):
-    write_mode = 'a+' if append else 'w'
-    with open(file_path, write_mode) as to_file:
+    write_mode = 'a' if append else 'w'
+    with open(file_path, write_mode,encoding='utf-8') as to_file:
         print('write content type:', type(str_content))
         # 无论python2和3,只要content是str就行
         # python2需要将unicode编码为str,python3需将bytes类型解码为str
@@ -386,8 +386,8 @@ def write_file(file_path, str_content, append=False):
 
 # 注意中文版windows的默认写入的编码格式是gbk
 def write_csv(file_path, row, append=False):
-    write_mode = 'a+' if append else 'w'
-    with open(file_path, write_mode) as to_file:
+    write_mode = 'a' if append else 'w'
+    with open(file_path, write_mode, encoding='utf-8') as to_file:
         writer = csv.writer(to_file)
         writer.writerow(row)
 

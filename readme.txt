@@ -48,8 +48,9 @@ python HtmlRunner.py tests/study_tests -p *test.py -m test_p1 -e sit
 
 依赖包安装：
 首先确保已经安装了pip，如果没有，可以用sudo easy_intall pip安装
-requests是必装的包：
-pip install requests
+一键安装所有依赖的包：pip install -r requirements.txt
+
+requests是必装的包：pip install requests
 上传文件可安装requests帮助包requests-toolbelt
 pip install requests-toolbelt
 加解密需要安装pycrypto，但是pycrypto已经停止维护了，而且windows环境依赖Microsoft VC++ build tool才能安装成功
